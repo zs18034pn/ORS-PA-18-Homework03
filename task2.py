@@ -23,6 +23,31 @@
 
 
 def valid_mobile_number(phone_number):
+    allowed_characters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+    for i in phone_number:
+        if i not in allowed_characters:
+            return False
+        else:
+            num = str(phone_number)
+            if len(num) == 9 or len(num) != 10:
+                return True
+            if num[0] == "0":
+                return True
+            if num[1]!= "6":
+                return True
+            if num[2] != "3":
+                return True
+            if num[2] != "6":
+                return False
+            if num[2] != "7":
+                return False
+            if num[2] != "8":
+                return False
+            if num[2] != "9":
+                return False
+    else:
+        return phone_number
+
 
 
 

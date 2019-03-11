@@ -13,17 +13,22 @@
 * Use main() function to test your solution.
 ===================================================
 """
-
-
 def sum_digits(number):
-
-
-
+    number = int(number)
+    allowed_character = ['0','1','2','3','4','5','6','7','8','9']
+    for i in str(number):
+        if i not in allowed_character:
+            return -1
+        else:
+            pass
+    sumDigit=0
+    for digits in str(number):
+        sumDigit += int(digits)
+    return sumDigit
 
 def main():
-
-    int_number = 1234
-    digit_sum = sum_digits(int_number)
+    number = 1234
+    digit_sum = sum_digits(number)
     print("Sum of digits for given numbers is: ", digit_sum)
 
 main()
